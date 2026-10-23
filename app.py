@@ -9,7 +9,7 @@ st.title("🚀 NhatMinh Hub AI")
 st.markdown("NhatMinh Hub AI siu bá khí =)) - Con AI chuyên viết script Roblox (Lua), Minecraft (Java) ")
 
 # 1. API Key của ông
-API_KEY = "AQ.Ab8RN6IadH9XvB1pDHsGIYe08qG1sMXPjNeSlMhUo-2HYfbd2g"
+API_KEY = "AQ.Ab8RN6LUH0bcBrljM0V8fo903A2E03El84ZjWuPpQaupaf96fQ"
 
 # Khởi tạo Client
 try:
