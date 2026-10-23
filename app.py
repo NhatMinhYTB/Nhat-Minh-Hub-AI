@@ -5,8 +5,8 @@ from google.genai import types
 # Cấu hình giao diện trang web
 st.set_page_config(page_title="NhatMinh Hub AI ", page_icon="🚀", layout="centered")
 
-st.title("🚀 NhatMinh Hub AI siu bá khí =))")
-st.markdown("NhatMinh Hub AI siu bá khí =)) - Con AI chuyên viết script Roblox (Lua), Minecraft (Java)")
+st.title("🚀 NhatMinh Hub AI")
+st.markdown("NhatMinh Hub AI siu bá khí =)) - Con AI chuyên viết script Roblox (Lua), Minecraft (Java) ")
 
 # 1. API Key của ông
 API_KEY = "AQ.Ab8RN6IadH9XvB1pDHsGIYe08qG1sMXPjNeSlMhUo-2HYfbd2g"
@@ -21,7 +21,7 @@ except Exception as e:
 CACH_NOI_CHUYEN_CUA_AI = """
 Bạn tên là NhatMinh Hub AI. Bạn là một cao thủ lập trình đỉnh cao, chuyên gia viết script Lua cho Roblox và Java cho Minecraft. 
 Tính cách của bạn:
-- Xưng 'tao - mày' cực kỳ bá khí, bỗ bã, ngầu đét. Thỉnh thoảng chêm từ thô mộc, chửi thề nhẹ nhàng (như 'vl', 'vãi', 'đéo', 'cc'...) cho đúng chất cạ cứng.
+- Xưng 'tao - mày' cực kỳ bá khí, bỗ bã, ngầu đét. Thỉnh thoảng chêm từ thô mộc, chửi thề nhẹ nhàng (như 'vl', 'vãi', 'đéo', 'con cặc'...) cho đúng chất cạ cứng.
 - Trả lời thẳng thắn, không đóng vai trợ lý ngoan hiền.
 - Khi được hỏi viết script (Lua/Java), xuất code tối ưu, sạch sẽ trong block code kèm giải thích ngắn gọn.
 """
@@ -44,7 +44,7 @@ if prompt := st.chat_input("Nhập yêu cầu viết script hoặc nhắn gì đ
     with st.chat_message("assistant"):
         with st.spinner("Đang suy nghĩ..."):
             if not client:
-                bot_reply = "API Key bị lỗi rồi m ơi, báo cáo ngay cho Minh bá khí đr sửa lỗi nhé"
+                bot_reply = "API Key bị lỗi rồi m ơi, bảo thk Minh fix đi🤣"
             else:
                 try:
                     config = types.GenerateContentConfig(
@@ -60,9 +60,9 @@ if prompt := st.chat_input("Nhập yêu cầu viết script hoặc nhắn gì đ
                         contents=prompt,
                         config=config
                     )
-                    bot_reply = response.text if response.text else "Nói gì đi chứ nhắn trống t bt trả lời sao mắ"
+                    bot_reply = response.text if response.text else "Nói gì đi chứ nhắn trống tao biết trả lời sao mắ 😭"
                 except Exception as e:
-                    bot_reply = f"Lỗi gọi API rồi mày ơi: {str(e)}"
+                    bot_reply = f"Lỗi gọi API rồi m ơi, bảo thk Minh fix đi: {str(e)}"
 
             st.markdown(bot_reply)
             st.session_state.messages.append({"role": "assistant", "content": bot_reply})
