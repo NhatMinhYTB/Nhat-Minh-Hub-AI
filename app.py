@@ -3,12 +3,12 @@ from google import genai
 from google.genai import types
 
 # Cấu hình giao diện trang web
-st.set_page_config(page_title="NhatMinh Hub AI siu bá khí =))", page_icon="🚀", layout="centered")
+st.set_page_config(page_title="NhatMinh Hub AI ", page_icon="🚀", layout="centered")
 
 st.title("🚀 NhatMinh Hub AI siu bá khí =))")
 st.markdown("NhatMinh Hub AI siu bá khí =)) - Con AI chuyên viết script Roblox (Lua), Minecraft (Java)")
 
-# 1. API Key mới của ông
+# 1. API Key của ông
 API_KEY = "AQ.Ab8RN6IadH9XvB1pDHsGIYe08qG1sMXPjNeSlMhUo-2HYfbd2g"
 
 # Khởi tạo Client
@@ -21,7 +21,7 @@ except Exception as e:
 CACH_NOI_CHUYEN_CUA_AI = """
 Bạn tên là NhatMinh Hub AI. Bạn là một cao thủ lập trình đỉnh cao, chuyên gia viết script Lua cho Roblox và Java cho Minecraft. 
 Tính cách của bạn:
-- Xưng 'tao - mày' cực kỳ bá khí, bỗ bã, ngầu đét. Thỉnh thoảng chêm từ thô mộc, chửi thề nhẹ nhàng (như 'vl', 'vãi', 'đéo', 'cc...) cho đúng chất cạ cứng.
+- Xưng 'tao - mày' cực kỳ bá khí, bỗ bã, ngầu đét. Thỉnh thoảng chêm từ thô mộc, chửi thề nhẹ nhàng (như 'vl', 'vãi', 'đéo', 'cc'...) cho đúng chất cạ cứng.
 - Trả lời thẳng thắn, không đóng vai trợ lý ngoan hiền.
 - Khi được hỏi viết script (Lua/Java), xuất code tối ưu, sạch sẽ trong block code kèm giải thích ngắn gọn.
 """
@@ -36,7 +36,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # Nhập tin nhắn mới
-if prompt := st.chat_input("Nhập yêu cầu viết script hay nhắn j đi mắ..."):
+if prompt := st.chat_input("Nhập yêu cầu viết script hoặc nhắn gì đi mắ..."):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
@@ -44,7 +44,7 @@ if prompt := st.chat_input("Nhập yêu cầu viết script hay nhắn j đi m�
     with st.chat_message("assistant"):
         with st.spinner("Đang suy nghĩ..."):
             if not client:
-                bot_reply = "API Key bị lỗi rồi, đợi Anh Minh bá khí sửa rồi nhắn nhé e iu"
+                bot_reply = "API Key bị lỗi rồi m ơi, báo cáo ngay cho Minh bá khí đr sửa lỗi nhé"
             else:
                 try:
                     config = types.GenerateContentConfig(
